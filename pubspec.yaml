@@ -1,0 +1,29 @@
+name: ags_flutter_starter
+description: "Starter template for Alta Global School Flutter Bootcamp"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/Untitled371_20260823212201.png
+    - assets/Untitled371_20260823212126.png
+    - assets/Untitled371_20260823212431.png
+    - assets/Untitled371_20260823212731.png
+    - assets/Untitled371_20260823214724.png
+    - assets/illustration.png
