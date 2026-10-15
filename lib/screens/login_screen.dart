@@ -3,11 +3,6 @@ import 'package:flutter/material.dart';
 import 'menu_screen.dart';
 import 'signup_screen.dart';
 
-// ============================================================================
-// LOGIN SCREEN - KANTINKU STARTER TEMPLATE (Week 6 & 7)
-// Alta Global School | IT Grade 10 & 11 (SHS)
-// ============================================================================
-
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
