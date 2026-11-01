@@ -140,6 +140,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         icon: const Icon(Icons.person_add_alt_1),
                         onPressed: () {
+                          // Navigator.push: Open registration form screen
                           Navigator.push(
                             context,
                             MaterialPageRoute(

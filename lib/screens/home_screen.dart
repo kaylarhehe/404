@@ -39,7 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: const [
                 Text(
-                  'Chris P. Bacon',
+                  '$userName',
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
@@ -63,8 +63,8 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              'Hello Chris!',
+            Text(
+              'Hello $userName!',
               style: TextStyle(
                 fontSize: 26,
                 fontWeight: FontWeight.bold,
