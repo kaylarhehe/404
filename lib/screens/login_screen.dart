@@ -92,7 +92,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => MenuScreen(userName: name),
+                              builder: (context) => HomeScreen(userName: name),
                             ),
                           );
                         },

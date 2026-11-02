@@ -1,24 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-// ============================================================================
-// ALTA GLOBAL SCHOOL: IT SHS (GRADES 10 & 11)
-// SPRINT 3: WEEK 14 & 15 COMBINED ASSIGNMENT TEMPLATE
-// TEACHER: MELDI
-// ============================================================================
-//
-// INSTRUCTIONS FOR STUDENTS:
-// You only need to edit the CUSTOMIZATION ZONE below to match your team app!
-// Everything else works out of the box.
-//
-// To install the storage package, open your terminal in VS Code and run:
-// flutter pub add shared_preferences
-// ============================================================================
-
-// ============================================================================
-// CUSTOMIZATION ZONE: CHANGE THESE 6 VARIABLES FOR YOUR TEAM APP!
-// ============================================================================
-
 /// 1. Your App Name (Appears in top AppBar)
 /// Examples: 'Tasky', 'PocketWise', 'ResQ', 'HabitHero', 'BullsEye'
 const String appTitle = '404';

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'menu_screen.dart';
+import 'texting_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   final String userName;
@@ -17,6 +19,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final String currentUserName = widget.userName;
+
     const Color greyHeader = Color(0xFFA7A7A3);
     const Color greyCard = Color(0xFFA7A7A3);
     const Color textColor = Color(0xFF333333);
@@ -37,9 +41,9 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(width: 12),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
+              children: [
                 Text(
-                  '$userName',
+                  '${widget.userName}',
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
@@ -64,7 +68,7 @@ class _HomeScreenState extends State<HomeScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Hello $userName!',
+              'Hello ${widget.userName}!',
               style: TextStyle(
                 fontSize: 26,
                 fontWeight: FontWeight.bold,
@@ -89,7 +93,14 @@ class _HomeScreenState extends State<HomeScreen> {
               imagePath: 'assets/Untitled371_20260823212201.png',
               imageWidth: 200,
               imageHeight: 200,
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => TeamCrudScreen(),
+                  ),
+                );
+              },
             ),
 
             const SizedBox(height: 16),
@@ -167,48 +178,51 @@ class _HomeScreenState extends State<HomeScreen> {
     double? imageHeight,
     required VoidCallback onTap,
   }) {
-    return GestureDetector(
-      onTap: onTap,
-      child: SizedBox(
-        height: 110,
-        width: double.infinity,
-        child: Stack(
-          clipBehavior: Clip.none,
-          alignment: Alignment.centerLeft,
-          children: [
-            // Background grey card
-            Container(
-              height: 110,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: backgroundColor,
-                borderRadius: BorderRadius.circular(24),
-              ),
-              padding: const EdgeInsets.only(left: 24, right: 140),
-              alignment: Alignment.centerLeft,
-              child: Text(
-                title,
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  height: 1.2,
+    return Material(
+      color: Colors.transparent,
+      child : InkWell(
+        onTap: onTap,
+        child: SizedBox(
+          height: 110,
+          width: double.infinity,
+          child: Stack(
+            clipBehavior: Clip.none,
+            alignment: Alignment.centerLeft,
+            children: [
+              // Background grey card
+              Container(
+                height: 110,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: backgroundColor,
+                  borderRadius: BorderRadius.circular(24),
+                ),
+                padding: const EdgeInsets.only(left: 24, right: 140),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  title,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    height: 1.2,
+                  ),
                 ),
               ),
-            ),
 
-            // Large artwork positioned on the right edge
-            Positioned(
-              right: 10,
-              bottom: -50,
-              child: Image.asset(
-                imagePath,
-                width: imageWidth ?? 150,
-                height: imageHeight ?? 150,
-                fit: BoxFit.contain,
+  // Large artwork positioned on the right edge
+              Positioned(
+                right: 10,
+                bottom: -50,
+                child: Image.asset(
+                  imagePath,
+                  width: imageWidth ?? 150,
+                  height: imageHeight ?? 150,
+                  fit: BoxFit.contain,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
